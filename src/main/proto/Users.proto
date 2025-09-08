@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "coop.stlma.tech.protocolsn.userplugin";
+option java_outer_classname = "UsersProto";
+option objc_class_prefix = "HLW";
+
+import "Common.proto";
+import "UserTypes.proto";
+
+package coop.stlma.tech.protocolsn.userplugin;
+
+service UsersService {
+  rpc ApproveUser (UserReference) returns (SuccessResponse) {}
+  rpc QueryUsers (UserQueryCriteria) returns (UserSearchResponse) {}
+  rpc GetUser (UserReference) returns (UserData) {}
+}

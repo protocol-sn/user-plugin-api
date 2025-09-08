@@ -1,7 +1,7 @@
-package coop.stlma.tech.protocolsn.registration.api;
+package coop.stlma.tech.protocolsn.userplugin.api;
 
-import coop.stlma.tech.protocolsn.registration.model.PsnUser;
-import coop.stlma.tech.protocolsn.registration.model.UserQueryCriteria;
+import coop.stlma.tech.protocolsn.userplugin.model.PsnUser;
+import coop.stlma.tech.protocolsn.userplugin.model.UserQueryCriteria;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.PathVariable;
 import reactor.core.publisher.Mono;
