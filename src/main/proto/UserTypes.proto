@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "coop.stlma.tech.protocolsn.userplugin";
+option java_outer_classname = "UserTypesProto";
+option objc_class_prefix = "HLW";
+
+import "Common.proto";
+import "UserGroups.proto";
+
+message UserReference {
+  string userId = 1;
+}
+
+message UserQueryCriteria {
+  Pagination pagination = 1;
+  oneof option {
+    bool approved = 2;
+  }
+  optional bool verified = 3;
+  optional bool requestsVerification = 4;
+  optional string search = 5;
+}
+
+message UserData {
+  string id = 1;
+  string username = 2;
+  optional string email = 3;
+  optional string givenName = 4;
+  optional string familyName = 5;
+  optional bool  approved = 6;
+  optional bool  verified = 7;
+  optional bool  requestsVerification = 8;
+  repeated coop.stlma.tech.protocolsn.userplugin.UserGroupData groupMembership = 9;
+}
+
+message UserSearchResponse {
+  repeated UserData users = 1;
+}

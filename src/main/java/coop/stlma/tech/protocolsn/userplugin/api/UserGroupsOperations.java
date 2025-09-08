@@ -1,7 +1,7 @@
-package coop.stlma.tech.protocolsn.registration.api;
+package coop.stlma.tech.protocolsn.userplugin.api;
 
-import coop.stlma.tech.protocolsn.registration.model.GroupQueryCriteria;
-import coop.stlma.tech.protocolsn.registration.model.UserGroup;
+import coop.stlma.tech.protocolsn.userplugin.model.GroupQueryCriteria;
+import coop.stlma.tech.protocolsn.userplugin.model.UserGroup;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.PathVariable;
 import reactor.core.publisher.Mono;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 import java.util.UUID;
 
-import static coop.stlma.tech.protocolsn.registration.api.UserOperations.NODE_USER_ADMIN;
+import static coop.stlma.tech.protocolsn.userplugin.api.UserOperations.NODE_USER_ADMIN;
 
 /**
  * Endpoints for interactions between users and groups

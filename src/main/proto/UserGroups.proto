@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "coop.stlma.tech.protocolsn.userplugin";
+option java_outer_classname = "UserGroupsProto";
+option objc_class_prefix = "HLW";
+
+import "Common.proto";
+
+package coop.stlma.tech.protocolsn.userplugin;
+
+service UserGroupsService {
+  rpc AddUserToGroup (UserGroupReference) returns (SuccessResponse) {}
+  rpc RemoveUserFromGroup (UserGroupReference) returns (SuccessResponse) {}
+  rpc AddGroupToDefaults (GroupReference) returns (SuccessResponse) {}
+  rpc RemoveGroupFromDefaults (GroupReference) returns (SuccessResponse) {}
+  rpc GetGroups (UserGroupQueryCriteria) returns (GroupSearchResponse) {}
+}
+
+message UserGroupReference {
+  string userId = 1;
+  string groupId = 2;
+}
+
+message GroupReference {
+  string groupId = 1;
+}
+
+message UserGroupQueryCriteria {
+  Pagination pagination = 1;
+  optional bool defaultUserGroup = 3;
+}
+
+message UserGroupData {
+  string id = 1;
+  string groupName = 2;
+  bool newUserDefault = 3;
+}
+
+message GroupSearchResponse {
+  repeated UserGroupData userGroups = 1;
+}

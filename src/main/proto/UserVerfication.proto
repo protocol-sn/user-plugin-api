@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "coop.stlma.tech.protocolsn.userplugin";
+option java_outer_classname = "UserVerificationProto";
+option objc_class_prefix = "HLW";
+
+import "UserTypes.proto";
+import "Common.proto";
+
+package coop.stlma.tech.protocolsn.userplugin;
+
+service UserVerificationService {
+  rpc VerifyUser (UserReference) returns (SuccessResponse) {}
+  rpc RequestVerification (UserReference) returns (SuccessResponse) {}
+}

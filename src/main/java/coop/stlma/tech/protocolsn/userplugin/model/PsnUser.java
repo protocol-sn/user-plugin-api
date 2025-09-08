@@ -1,4 +1,4 @@
-package coop.stlma.tech.protocolsn.registration.model;
+package coop.stlma.tech.protocolsn.userplugin.model;
 
 import io.micronaut.serde.annotation.Serdeable;
 import lombok.AllArgsConstructor;

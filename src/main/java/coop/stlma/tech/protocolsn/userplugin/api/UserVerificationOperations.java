@@ -1,5 +1,5 @@
-package coop.stlma.tech.protocolsn.registration.api;
-import coop.stlma.tech.protocolsn.registration.model.PsnUser;
+package coop.stlma.tech.protocolsn.userplugin.api;
+import coop.stlma.tech.protocolsn.userplugin.model.PsnUser;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.PathVariable;
 import reactor.core.publisher.Mono;
